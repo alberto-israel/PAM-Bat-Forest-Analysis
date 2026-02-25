@@ -28,6 +28,12 @@ This repository contains a set of R scripts for analyzing bat ecology using pass
 - `outputs/`: graphs, tables, and result files  
 - `README.md`: this file
 
+## Requirements
+- R ≥ 4.0.0
+- RStudio (recommended)
+- Required packages are automatically installed via `00_setup.R`
+See `scripts/00_setup.R` for the complete list of dependencies.
+
 ## How to run
 This project uses an `.Rproj` file together with the `here` package
 
