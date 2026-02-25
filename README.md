@@ -39,3 +39,11 @@ To run the analysis correctly:
 5. Run the scripts in sequential order: 01 → 05.
 6. Results will be saved in the `outputs/` folder.
 
+## Citation & Context
+This workflow was developed as part of my MSc thesis in Nature Sciences 
+at Sapienza University of Rome (2025). 
+The pipeline was designed to be generalizable and reproducible, allowing 
+users to adapt it to their own passive acoustic monitoring datasets.
+
+If you use or adapt this code, please cite this repository.
+
