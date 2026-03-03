@@ -8,13 +8,13 @@ This repository contains a set of R scripts for analyzing bat ecology using pass
    Handles dataset import, cleaning, and initial formatting. Prepares a standardized `bat_data` object for downstream analyses.
 
 2. **02_multivariate_exploration.R**  
-   Performs exploratory multivariate analyses of community composition, including NMDS, PCA, RDA, CCA, and ordination plots. Allows visual inspection of patterns before formal modeling.
+   Performs exploratory multivariate analyses of community composition, including PCA and NMDS with ordination plots. Allows visual inspection of patterns before formal modeling. Allows visual inspection of patterns before formal modeling.
 
 3. **03_modeling_univariate.R**  
    Implements GLM, GLMM, and GAM approaches to test ecological hypotheses on bat activity, species richness, and evenness as functions of environmental predictors. Generates coefficient plots and response visualizations.
 
 4. **04_multivariate_inference.R**  
-   Conducts inferential analyses at the community level, such as PERMANOVA, MANOVA, and indicator species analysis, to detect which environmental variables drive community composition and which species are characteristic of particular habitats.
+   Conducts inferential analyses at the community level, including PERMANOVA, RDA/CCA, variance partitioning, and indicator species analysis, to detect which environmental variables drive community composition and which species are characteristic of particular habitats
 
 5. **05_additional_analyses.R**  
    Contains complementary analyses that reveal finer community responses, including:  
