@@ -22,6 +22,9 @@ This repository contains a set of R scripts for analyzing bat ecology using pass
    - **05b_beta_diversity**: computes site-to-site dissimilarities and partitions beta diversity into turnover and nestedness components.  
    - **05c_network_analysis**: builds species interaction networks to visualize potential associations and modularity within the community.
 
+6. **06_sampling_completeness.R**
+     Evaluates sampling completeness and adequacy using: species accumulation curves (spatial and temporal), non-parametric richness estimators (Chao1, Jackknife), coverage-based rarefaction (iNEXT), stratified completeness analysis by habitat type.
+
 ## Folder structure
 - `data/`: raw and example datasets (e.g., `bat_data.csv`)  
 - `scripts/`: R scripts (01-05)  
