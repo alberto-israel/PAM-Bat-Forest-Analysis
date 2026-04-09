@@ -45,7 +45,7 @@ To run the analysis correctly:
 2. Open the project by double-clicking `PAM_Bat_Forest_Analysis.Rproj`.
 3. Open RStudio (the working directory will be set automatically).
 4. Place your dataset in `data/bat_data.csv`.
-5. Run the scripts in sequential order: 01 → 05.
+5. Run the scripts in sequential order: 01 → 06.
 6. Results will be saved in the `outputs/` folder.
 
 ## Citation & Context
