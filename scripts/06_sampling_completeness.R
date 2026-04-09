@@ -9,7 +9,7 @@
 #   - Temporal accumulation (Section 4) requires daily-level data
 #   - If daily data unavailable, Section 4 will be skipped
 #   - Designed to integrate with 01_data_import.R
-# Last update: 2025-03-20
+# Last update: 2026-03-20
 # ============================================================
 
 # ------------------------------------------------------------
