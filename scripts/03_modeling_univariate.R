@@ -6,13 +6,13 @@
 # Notes:
 #   - Designed to integrate with 01_data_import.R and 02_multivariate_exploration.R
 #   - All variable names must be adapted to the user's dataset
-# Last update: 2026-02-24
+# Last update: 2026-05-05
 # ============================================================
 
 # ------------------------------------------------------------
 # 0.0) Setup project environment
 # ------------------------------------------------------------
-source(here::here("scripts", "00_setup.R"))
+source(here::here("scripts", "00a_setup.R"))
 
 data_dir   <- file.path(here::here(), "data")
 output_dir <- file.path(here::here(), "outputs")
