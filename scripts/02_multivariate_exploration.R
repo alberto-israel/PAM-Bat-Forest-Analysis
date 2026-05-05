@@ -6,14 +6,14 @@
 # Notes:
 #   - Unconstrained ordination only (no formal modelling)
 #   - Designed to integrate with 01_data_import.R
-# Last update: 2026-02-24
+# Last update: 2026-05-5
 # ============================================================
 
 
 # ------------------------------------------------------------
 # 0) Setup project environment
 # ------------------------------------------------------------
-source(here::here("scripts", "00_setup.R"))
+source(here::here("scripts", "00a_setup.R"))
 
 data_dir   <- file.path(here::here(), "data")
 output_dir <- file.path(here::here(), "outputs")
