@@ -16,8 +16,6 @@ The pipeline is organized in two stages:
 
 - **`00b_data_preparation.R`** *(optional — only if starting from raw Kaleidoscope output)* — Imports raw Kaleidoscope `id.csv` files from multiple sites, performs quality control, assigns nocturnal sessions, and produces three analysis-ready matrices: site × species (aggregated), site × day × species, and site × hour × day × species. These are saved to `outputs/`.
 
-- **`00c_temperature_integration.R`** *(coming soon)* — Extracts temperature data from Kaleidoscope summary `.txt` files and integrates it with the analysis matrices.
-
 **Section 1 — Site × Species Analysis** (scripts 01–06)
 
 - **`01_data_import.R`** — Imports the site × species matrix, cleans data, and computes community-level response variables (total activity, guild-specific activity, species richness, Simpson and Shannon diversity indices).
