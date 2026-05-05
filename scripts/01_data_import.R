@@ -10,7 +10,7 @@
 # 0) Setup project environment
 # ------------------------------------------------------------
 # Source setup script (installs and loads packages)
-source(here::here("scripts", "00_setup.R"))
+source(here::here("scripts", "00a_setup.R"))
 
 # Define main directories
 data_dir   <- file.path(here::here(), "data")
@@ -20,7 +20,7 @@ output_dir <- file.path(here::here(), "outputs")
 # ============================================================
 # 1) Import data
 # ============================================================
-bat_data <- read_csv(file.path(data_dir, "bat_data.csv")) #if file is .xlsx, switch to read_excel()
+bat_data <- read_csv(file.path(data_dir, "example", "bat_data_site_species.csv")) #switch file if needed. if file is .xlsx, switch to read_excel()
 # Inspect
 glimpse(bat_data)
 summary(bat_data)
