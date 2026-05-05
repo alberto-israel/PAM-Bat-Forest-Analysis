@@ -5,13 +5,13 @@
 # Section b: : Beta diversity (turnover, nestedness, total, PERMANOVA)
 # Notes:
 #   - Designed to integrate with 01_data_import.R
-# Last update: 2026-02-24
+# Last update: 2026-05-05
 # ============================================================
 
 # -----------------------------
 # 0) Setup project environment
 # -----------------------------
-source(here::here("scripts", "00_setup.R"))
+source(here::here("scripts", "00a_setup.R"))
 
 library(tidyverse)  # data manipulation and plotting
 library(vegan)      # PERMANOVA, ordination
