@@ -4,25 +4,28 @@
 This repository contains a set of R scripts for analyzing bat ecology using passive acoustic monitoring data at the site × species level. The workflow focuses on acoustic activity (total and species-specific), species richness, diversity (Simpson/Shannon), and community composition. The scripts are designed for flexible integration with user-provided datasets and include both univariate and multivariate approaches, as well as additional analyses to explore finer community patterns.
 
 ### Scripts overview
-1. **01_data_import.R**  
+0. **00_setup.R**  
+   Installs and loads all required R packages for the analysis.
+   
+2. **01_data_import.R**  
    Handles dataset import, cleaning, and initial formatting. Prepares a standardized `bat_data` object for downstream analyses.
 
-2. **02_multivariate_exploration.R**  
+3. **02_multivariate_exploration.R**  
    Performs exploratory multivariate analyses of community composition, including PCA and NMDS with ordination plots. Allows visual inspection of patterns before formal modeling. Allows visual inspection of patterns before formal modeling.
 
-3. **03_modeling_univariate.R**  
+4. **03_modeling_univariate.R**  
    Implements GLM, GLMM, and GAM approaches to test ecological hypotheses on bat activity, species richness, and evenness as functions of environmental predictors. Generates coefficient plots and response visualizations.
 
-4. **04_multivariate_inference.R**  
+5. **04_multivariate_inference.R**  
    Conducts inferential analyses at the community level, including PERMANOVA, RDA/CCA, variance partitioning, and indicator species analysis, to detect which environmental variables drive community composition and which species are characteristic of particular habitats
 
-5. **05_additional_analyses.R**  
+6. **05_additional_analyses.R**  
    Contains complementary analyses that reveal finer community responses, including:  
    - **05a_cooccurrence**: evaluates pairwise species co-occurrence patterns in different habitat types.  
    - **05b_beta_diversity**: computes site-to-site dissimilarities and partitions beta diversity into turnover and nestedness components.  
    - **05c_network_analysis**: builds species interaction networks to visualize potential associations and modularity within the community.
 
-6. **06_sampling_completeness.R**
+7. **06_sampling_completeness.R**
      Evaluates sampling completeness and adequacy using: species accumulation curves (spatial and temporal), non-parametric richness estimators (Chao1, Jackknife), coverage-based rarefaction (iNEXT), stratified completeness analysis by habitat type.
 
 ## Folder structure
