@@ -9,14 +9,14 @@
 #       02_multivariate_exploration.R
 #       03_modeling_univariate.R
 #   - Fill in the placeholders for response and predictors
-# Last update: 2026-02-24
+# Last update: 2026-05-05
 # ============================================================
 
 
 # ------------------------------------------------------------
 # 0) Setup project environment
 # ------------------------------------------------------------
-source(here::here("scripts", "00_setup.R"))
+source(here::here("scripts", "00a_setup.R"))
 
 data_dir   <- file.path(here::here(), "data")
 output_dir <- file.path(here::here(), "outputs")
