@@ -2,11 +2,13 @@
 
 ## Description
 
-This repository provides a modular R workflow for analyzing bat ecology from passive acoustic monitoring (PAM) data. The pipeline supports two entry points: raw Kaleidoscope output files, or a pre-aggregated site × species matrix. The workflow covers acoustic activity (total and species-specific), species richness, diversity indices (Simpson/Shannon), community composition, and sampling completeness. Scripts are designed to be generalizable and adaptable to different datasets and study systems.
+This repository implements a reproducible R workflow to analyse bat communities from passive acoustic monitoring (PAM) data. The framework translates acoustic detections into ecological inference on how spatial covariates shape bat activity, species diversity, and community composition across scales.
+The pipeline supports both raw Kaleidoscope Pro outputs and pre-aggregated site × species matrices, ensuring flexibility across datasets while maintaining a consistent analytical structure. It integrates data preparation, statistical modelling, multivariate community analysis, and sampling completeness assessment within a unified workflow.
+The workflow is designed as a generalizable template for structuring ecological analyses of acoustic data, from raw detections to community-level inference.
 
 ---
 
-## Workflow overview
+## Overview
 
 The pipeline is organized in two stages:
 
@@ -121,6 +123,5 @@ This project uses an `.Rproj` file together with the `here` package for portable
 
 ## Citation & Context
 
-This workflow was developed as part of my MSc thesis in Nature Sciences at Sapienza University of Rome (2025). The pipeline is designed to be generalizable and reproducible, adaptable to passive acoustic monitoring datasets from different study systems.
-
+This workflow was developed as part of my MSc thesis in Nature Sciences at Sapienza University of Rome (2025).
 If you use or adapt this code, please cite this repository.
