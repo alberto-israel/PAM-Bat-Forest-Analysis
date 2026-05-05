@@ -2,7 +2,7 @@
 # 01_data_import.R
 # Author: Alberto Israel
 # Purpose: Import bat acoustic dataset, clean data, and compute species richness & diversity indices
-# Last update: 2026-02-24
+# Last update: 2026-05-05
 # ============================================================
 
 
