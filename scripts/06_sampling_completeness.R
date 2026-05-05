@@ -9,17 +9,13 @@
 #   - Temporal accumulation (Section 4) requires daily-level data
 #   - If daily data unavailable, Section 4 will be skipped
 #   - Designed to integrate with 01_data_import.R
-# Last update: 2026-03-20
+# Last update: 2026-05-05
 # ============================================================
 
 # ------------------------------------------------------------
 # 0) Setup project environment
 # ------------------------------------------------------------
-source(here::here("scripts", "00_setup.R"))
-
-# Additional package for coverage-based rarefaction
-if (!require("iNEXT")) install.packages("iNEXT")
-library(iNEXT)
+source(here::here("scripts", "00a_setup.R"))
 
 data_dir   <- file.path(here::here(), "data")
 output_dir <- file.path(here::here(), "outputs")
