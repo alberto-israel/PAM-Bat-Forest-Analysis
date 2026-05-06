@@ -483,7 +483,7 @@ for (f in output_files) {
 
 cat("\n--- Next Steps ---\n")
 cat("1. Review the site_summary.csv and species_frequency.csv for data quality\n")
-cat("2. If you have temperature data, run 00c_temperature_integration.R\n")
+cat("2. If you have temperature data, run 07_temperature.R\n")
 cat("3. If you have habitat data, add it manually in Section 5\n")
 cat("4. Proceed to 01_data_import.R to clean and format for analysis\n")
 cat("5. Use bat_data_site_species.csv for scripts 01-05\n")
