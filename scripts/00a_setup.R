@@ -11,7 +11,7 @@ packages <- c(
   "MASS", "lme4", "glmmTMB", "DHARMa", "performance",
   "visreg", "sjPlot", "MuMIn", "mgcv", "corrplot",
   "indicspecies", "car", "lubridate", "cooccur", "betapart", "igraph",
-  "here", "RColorBrewer", "iNEXT")
+  "here", "RColorBrewer", "iNEXT", "suncalc")
 
 # Install missing packages
 new_packages <- packages[!(packages %in% installed.packages()[,"Package"])]
