@@ -3,20 +3,20 @@
 ## Description
 
 This repository implements a reproducible R workflow to analyse bat communities from passive acoustic monitoring (PAM) data. The framework translates acoustic detections into ecological inference on how spatial covariates shape bat activity, species diversity, and community composition across scales.
-The pipeline supports both raw Kaleidoscope Pro outputs and pre-aggregated site × species matrices, ensuring flexibility across datasets while maintaining a consistent analytical structure. It integrates data preparation, statistical modelling, multivariate community analysis, and sampling completeness assessment within a unified workflow.
+The pipeline supports both raw Kaleidoscope Pro outputs and pre-aggregated site × species matrices, ensuring flexibility across datasets while maintaining a consistent analytical structure. It integrates data preparation, statistical modelling, multivariate community analysis, sampling completeness assessment, and environmental covariate extraction within a unified workflow.
 The workflow is designed as a generalizable template for structuring ecological analyses of acoustic data, from raw detections to community-level inference.
 
 ---
 
 ## Overview
 
-The pipeline is organized in two stages:
+The pipeline is organized in three sections:
 
 **Section 0 — Setup & Data Preparation** (run once before analysis)
 
 - **`00a_setup.R`** — Installs and loads all required R packages.
 
-- **`00b_data_preparation.R`** *(optional — only if starting from raw Kaleidoscope output)* — Imports raw Kaleidoscope `id.csv` files from multiple sites, performs quality control, assigns nocturnal sessions, and produces three analysis-ready matrices: site × species (aggregated), site × day × species, and site × hour × day × species. These are saved to `outputs/`.
+- **`00b_data_preparation.R`** *(optional — only if starting from raw Kaleidoscope output)* — Imports raw Kaleidoscope `id.csv` files from multiple sites, performs quality control, assigns nocturnal sessions, and produces three analysis-ready matrices: site × species (aggregated), site × day × species, and site × hour × day × species. Also extracts site coordinates from Kaleidoscope summary files. All outputs are saved to `outputs/`.
 
 **Section 1 — Site × Species Analysis** (scripts 01–06)
 
@@ -35,9 +35,11 @@ The pipeline is organized in two stages:
 
 - **`06_sampling_completeness.R`** — Sampling completeness and adequacy assessment: species accumulation curves (spatial and temporal), non-parametric richness estimators (Chao1, Jackknife), coverage-based rarefaction (iNEXT), stratified completeness analysis by habitat type.
 
-**Section 2 — (coming soon)** 
+**Section 2 — Environmental Covariates** (scripts 07–08)
 
-- **`07+`** 
+- **`07_temperature.R`** — Extracts nocturnal temperature data from Kaleidoscope summary files (`S*.txt`). Produces hourly, daily, and site-level temperature tables and joins them with the detection matrices.
+
+- **`08_moon.R`** — Computes lunar covariates (moon altitude, azimuth, illuminated fraction, phase, and brightness) for each sampled site × night × hour combination using `suncalc`. Joins results with the hourly detection matrix. Moon brightness (illuminated fraction × visibility above horizon) is the primary ecologically relevant output.
 
 ---
 
@@ -64,8 +66,12 @@ PAM-Bat-Forest-Analysis/
 │   ├── 02_multivariate_exploration.R
 │   ├── 03_modeling_univariate.R
 │   ├── 04_multivariate_inference.R
-│   ├── 05_additional_analyses.R
-│   └── 06_sampling_completeness.R
+│   ├── 05a_additional_analyses.R
+│   ├── 05b_additional_analyses.R
+│   ├── 05c_additional_analyses.R
+│   ├── 06_sampling_completeness.R
+│   ├── 07_temperature.R
+│   └── 08_moon.R
 ├── outputs/                            ← generated automatically; all results saved here
 ├── README.md
 ├── LICENSE
@@ -108,8 +114,9 @@ This project uses an `.Rproj` file together with the `here` package for portable
 2. Open `PAM_Bat_Forest_Analysis.Rproj` in RStudio.
 3. Place your Kaleidoscope output folders and summary `.txt` files in `data/raw_pam_outputs/` (see structure above).
 4. Run `00a_setup.R` to install and load packages.
-5. Run `00b_data_preparation.R` to generate analysis matrices (saved to `outputs/`).
-6. Run scripts `01` → `06` in order. Results are saved to `outputs/`.
+5. Run `00b_data_preparation.R` to generate analysis matrices and extract site coordinates (saved to `outputs/`).
+6. Run `07_temperature.R` and `08_moon.R` to add environmental covariates.
+7. Run scripts `01` → `06` in order. Results are saved to `outputs/`.
 
 **Option B — Starting from a pre-aggregated site × species matrix**
 
